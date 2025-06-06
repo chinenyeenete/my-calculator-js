@@ -1,0 +1,40 @@
+/* Write CSS code here */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(123, 103, 123);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.calculator{
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#display{
+    padding: 24px;
+    font-size: 30px;
+    border: none;
+    text-align: right;
+    background-color: white;
+    color: black;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 105px);
+}
+.btn{
+    padding: 19px;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: pink;
+    cursor: pointer;
+}
+.equal{
+    grid-column: span 3;
+    background-color: rgb(199, 119, 145);
+}
+.btn:hover{
+    opacity: 0.8;
+}
