@@ -13,16 +13,18 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 #display{
-    padding: 27px;
+    padding: 40px;
     font-size: 30px;
     border: none;
     text-align: right;
     background-color: white;
     color: black;
+    box-sizing: border-box;
 }
 .buttons{
     display: grid;
-    grid-template-columns: repeat(4, 105px);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 .btn{
     padding: 19px;
@@ -37,4 +39,22 @@ body{
 }
 .btn:hover{
     opacity: 0.8;
+}
+
+/* responsive design for phone screens */
+@media (max-width: 480px) {
+    .calculator {
+        margin: 10px;
+    }
+    
+    #display {
+        font-size: 24px;
+        padding: 20px;
+    }
+    
+    .btn {
+        font-size: 18px;
+        padding: 15px;
+        min-height: 50px;
+    }
 }

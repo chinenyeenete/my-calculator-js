@@ -1,4 +1,3 @@
-// Original functional logic
 function appendToDisplay(inp) {
     let display = document.getElementById('display');
     display.value += inp;
@@ -21,25 +20,21 @@ function calculateResult() {
     newResult.value = result;
 }
 
-// Create main calculator container
 const calculator = document.createElement("div");
 calculator.className = "calculator";
 
-// Create display input
 const display = document.createElement("input");
 display.type = "text";
 display.id = "display";
 display.disabled = true;
 calculator.appendChild(display);
 
-// Create button container
 const buttonsContainer = document.createElement("div");
 buttonsContainer.className = "buttons";
 
-// Button definitions
 const buttonData = [
-    ['C', 'clearDisplay()'],
-    ['←', 'deleteLast()'],
+    ['AC', 'clearDisplay()'],
+    ['DEL', 'deleteLast()'],
     ['/', "appendToDisplay('/')"],
     ['*', "appendToDisplay('*')"],
     ['7', "appendToDisplay('7')"],
@@ -58,7 +53,6 @@ const buttonData = [
     ['=', "calculateResult()", 'equal']
 ];
 
-// Create buttons using simplified loop
 for (const [label, action, extraClass] of buttonData) {
     const btn = document.createElement("button");
     btn.textContent = label;
@@ -67,6 +61,5 @@ for (const [label, action, extraClass] of buttonData) {
     buttonsContainer.appendChild(btn);
 }
 
-// Final assembly
 calculator.appendChild(buttonsContainer);
 document.body.appendChild(calculator);
